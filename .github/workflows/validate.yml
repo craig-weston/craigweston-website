@@ -1,0 +1,19 @@
+name: Validate website
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required site files
+        shell: bash
+        run: |
+          test -d public
+          test -f public/index.html
+          test -f public/matchpoint.html
+          test -f public/design.html
+          python3 scripts/check_site.py
