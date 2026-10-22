@@ -1,0 +1,21 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Never commit local credentials or tooling byproducts
+.env
+.env.*
+!.env.example
+.wrangler/
+node_modules/
+__pycache__/
+*.pyc
+
+# Local previews/build outputs
+screenshots/
+dist/
+coverage/

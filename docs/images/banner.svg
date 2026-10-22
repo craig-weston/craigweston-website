@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+<title id="title">Craig Weston — Design for the human side of technology</title><desc id="desc">An editorial black and midnight-blue banner with delicate Japanese-inspired linework, amber type and the Japanese character for space.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101a22"/><stop offset="0.64" stop-color="#0b1318"/><stop offset="1" stop-color="#17212a"/></linearGradient><linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f2bf89" stop-opacity=".5"/><stop offset="1" stop-color="#7bb8b4" stop-opacity=".35"/></linearGradient></defs>
+<rect width="1280" height="400" fill="url(#bg)"/>
+<g fill="none" stroke="url(#stroke)" stroke-width="1.4" opacity=".75"><circle cx="1062" cy="160" r="210"/><circle cx="1062" cy="160" r="166"/><circle cx="1062" cy="160" r="122"/><path d="M795 0v400M850 0v400M0 338h1280"/><path d="M710 289C831 211 896 352 1006 274s158-64 274 1"/><path d="M712 318C849 249 914 380 1030 313s159-63 250-12"/></g>
+<path d="M0 0h9v400H0z" fill="#ebaf77"/><path d="M45 61h52" stroke="#e9b17e" stroke-width="3"/>
+<text x="75" y="112" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#d8b999" letter-spacing="7">INDEPENDENT DESIGN • UX • BOOKS</text>
+<text x="70" y="203" font-family="Georgia,serif" font-size="86" fill="#f5f1e9">CRAIG WESTON</text>
+<text x="76" y="262" font-family="Georgia,serif" font-size="30" font-style="italic" fill="#b5d2d3">Design for the human side of technology.</text>
+<text x="76" y="358" font-family="Arial,Helvetica,sans-serif" font-size="15" letter-spacing="3" fill="#c0c9cc">PRODUCT DISCOVERY  /  USER-CENTRED DESIGN  /  WRITING</text>
+<text x="1009" y="200" font-family="Georgia,serif" font-size="99" fill="#f0c99e" opacity=".85">間</text>
+</svg>
