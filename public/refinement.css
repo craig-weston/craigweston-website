@@ -1,0 +1,258 @@
+/* Craig Weston — UX-led refinement, October 2026.
+ * Typography: Plus Jakarta Sans for display; Inter for text and interaction;
+ * Noto Sans JP for Japanese copy, with resilient system fallbacks.
+ * WCAG 2.2 AA design targets; see ACCESSIBILITY-REVIEW.md for audit limits. */
+:root{
+ --font-body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+ --font-display:'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+ --font-jp:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
+ --sans:var(--font-body); --display:var(--font-display);
+ --night:#0a111c; --night-2:#111d2d; --night-3:#152338;
+ --bone:#f5f7fa; --bone-soft:#d7e0e8; --dim:#c0cedb;
+ --muted:#c1cfdb; --seafoam:#93f0de; --electric:#b3bcff; --copper:#ffd29e; --rose:#f7bbd0;
+ --layout-max:1240px; --gutter:clamp(22px,4vw,64px);
+ --space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:64px;--space-7:96px;
+ --curve:cubic-bezier(.22,.72,.2,1);
+}
+html{font-size:16px;scroll-padding-top:116px}
+body{color:var(--bone);font:400 1rem/1.7 var(--font-body);-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+[lang="ja"]{font-family:var(--font-jp)}
+.container{width:min(var(--layout-max),calc(100% - var(--gutter)*2));margin-inline:auto}
+.header-inner{width:min(1450px,calc(100% - var(--gutter)*2))}
+*{min-width:0}html,body{overflow-x:clip}
+h1,h2,h3,h4,h5,h6,
+.display-heading,.section-heading h2,.hero h1,.signature-copy h2,.book-feature-copy h2,.design-statement h2,
+.japan-copy h2,.match-copy h2,.final-cta h2,.studio-page-hero h1,.about-hero-grid h1,.page-hero h1,
+.books-page-hero h1,.product-hero h1,.mp-page-hero h1,.mp-demo-header h2,.mp-hmw h3,.mp-flow-detail h3,
+.approach-card h3,.philosophy-content h2,.manifesto-copy h2,.books-bento-card h2,.word-panel h3,
+.studio-hero-aside h3,.type-poster>div,.pullquote p,.footer-pre h2{
+ font-family:var(--font-display)!important; font-weight:650!important;
+ letter-spacing:-.045em!important;line-height:1.13!important;
+}
+h1{font-size:clamp(3rem,5.7vw,5.65rem)!important;letter-spacing:-.055em!important}
+h2{font-size:clamp(2.15rem,4vw,3.7rem)!important}
+h3{font-size:clamp(1.2rem,1.55vw,1.6rem)!important;line-height:1.3!important;letter-spacing:-.025em!important}
+h4{font-size:1.15rem!important;line-height:1.4!important}
+h1 em,h2 em,h3 em{font-style:normal!important;font-weight:inherit!important;letter-spacing:inherit!important}
+.hero h1{font-size:clamp(3.6rem,6vw,6.15rem)!important;line-height:1.085!important;max-width:12ch;margin:clamp(28px,4vw,50px) 0 32px}
+.hero h1 em{color:var(--seafoam)}
+body p,body li{line-height:1.75}
+.hero-intro,.signature-copy p,.book-feature-copy p,.design-statement p,.about-teaser p,.japan-copy p,.match-copy p,.bookshop-hub p,
+.library-header p,.library-outro p,.books-page-hero p,.product-hero p,.studio-hero-aside p,.mp-page-hero p,.section-heading p,
+.mp-hmw p,.mp-decision-grid p,.mp-flow-field p,.mp-artifact-caption p,.process-step p,.method p,.catalog-card p,
+.approach-card p,.word-panel p,.philosophy-content p,.manifesto-copy p,.reading-card p,.books-selector p{
+ font-size:clamp(1rem,1.13vw,1.085rem)!important;line-height:1.77!important;color:var(--bone-soft)!important;
+}
+.section-heading{align-items:start;gap:clamp(24px,5vw,72px)}
+.section-heading p{max-width:425px}
+.section-pad{padding-block:clamp(82px,8.5vw,132px)!important}
+.smallcaps,.eyebrow,.overline-index,.library-type,.mp-step-index,.mp-flow-id,.mp-column-meta,.library-number,.catalog-label,.library-vertical-kanji{
+ font-family:var(--font-body)!important;letter-spacing:.12em!important;font-weight:700!important
+}
+.eyebrow,.smallcaps{font-size:.79rem!important;line-height:1.5!important;color:var(--seafoam)!important}
+.brand-text{font-family:var(--font-display);font-size:1rem!important;font-weight:750;letter-spacing:-.025em}
+.brand-text small{font-size:.66rem!important;letter-spacing:.06em!important;color:#ccdae5!important;line-height:1.5}
+.site-header{height:88px!important;isolation:isolate}
+.brand-mark{font-family:var(--font-display)!important; font-weight:700;font-size:1.1rem}
+.nav-links{gap:4px!important;padding:5px!important}
+.nav-links a{font-family:var(--font-body);font-size:.92rem!important;line-height:1.35!important;font-weight:650!important;letter-spacing:0!important;padding:13px 17px!important;min-height:46px;display:inline-flex;align-items:center;justify-content:center}
+.nav-links a:not(.active){color:#deebf2!important}.nav-links a.active,.nav-links a:hover{color:#111a27!important}
+.top-contact{font-size:.88rem!important;min-height:48px!important;font-weight:750}
+.social-mini-link{min-width:43px;min-height:44px;justify-content:center}.social-mini-link b{font-size:.7rem!important}
+.btn,.button,.book-buy-link,.catalog-footer a,.shelf-links a,.library-amazon-link{
+ font-family:var(--font-body);font-size:.91rem!important;font-weight:700!important;letter-spacing:0!important;line-height:1.35!important
+}
+.btn{min-height:52px!important;padding:15px 24px!important;gap:17px!important}
+.text-link{font-size:.93rem!important;letter-spacing:0!important;min-height:44px;align-items:center;font-weight:700}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{
+ outline:3px solid #fce3a2!important;outline-offset:4px!important;box-shadow:0 0 0 7px rgba(8,19,31,.85)!important;
+}
+:where(a,button){touch-action:manipulation}
+a{text-underline-offset:.16em}
+a:hover{text-decoration-thickness:2px}
+.skip-link{position:fixed;left:20px;top:-110px;z-index:10000;color:#101b29;background:#fff8d0;padding:15px 22px;font-size:1rem;font-weight:800;border-radius:0 0 12px 12px;text-decoration:none;box-shadow:0 8px 28px #0008;transition:top .15s ease}
+.skip-link:focus{top:0;outline:3px solid #93f0de}
+main:focus{outline:none}
+:target{scroll-margin-top:116px}
+/* Landing: immersive without compromising readable copy widths */
+.hero{min-height:720px}.hero-shell{min-height:720px;grid-template-columns:53% 47%}
+.hero-copy{padding-top:clamp(78px,7vw,110px);padding-bottom:72px;padding-left:max(var(--gutter),calc((100vw - var(--layout-max))/2))}
+.hero-intro{max-width:520px!important;margin-bottom:8px!important}
+.hero-visual,.hero-shell{min-height:720px}.hero-visual:before{background:linear-gradient(90deg,#0b111b 0%,rgba(11,17,27,.05) 21%,transparent 48%),linear-gradient(0deg,#0b111b55,transparent 50%)}
+.hero-number,.hero-foot,.hero-socials a{font-size:.78rem!important;color:#d7e3e9!important}
+.hero-socials a{min-height:42px!important;align-items:center}
+.seal{font:600 .78rem/1.5 var(--font-display)!important;letter-spacing:0}
+.signature-grid{grid-template-columns:174px minmax(0,1fr) auto;gap:clamp(28px,5vw,68px)}
+.signature-portrait,.signature-portrait img{width:164px;height:164px;animation:none!important}
+.signature-copy h2{font-size:clamp(2rem,3.5vw,3.5rem)!important}
+.signature-copy p{max-width:720px}
+.signature-actions .text-link{font-size:.92rem!important}
+.signature-kanji{font:105px/1 var(--font-jp)}
+.book-feature-grid,.japan-feature-grid,.match-grid,.about-hero-grid,.mp-hero-grid{gap:clamp(38px,6vw,90px)!important}
+.book-feature-art{border-radius:22px}
+.feature-extract{border-left:3px solid var(--seafoam);padding:12px 0 12px 20px;margin:30px 0 24px;background:linear-gradient(90deg,rgba(147,240,222,.065),transparent 80%)}
+.feature-extract span{display:block;font-size:.8rem;letter-spacing:.1em;color:var(--seafoam);font-weight:750}
+.feature-extract blockquote{font:600 clamp(1.1rem,1.65vw,1.45rem)/1.5 var(--font-display);max-width:560px;color:#f0f7fa;margin:10px 0 0;letter-spacing:-.025em}
+.inline-meta{flex-wrap:wrap;gap:12px!important}
+.inline-meta span{font-size:.8rem!important;letter-spacing:0!important;padding:8px 12px!important}
+/* Home library: photographically faithful book art, clean grid, accurate links. */
+.library-section{position:relative;background:linear-gradient(180deg,#111b2a 0%,#121d2d 52%,#0d1826 100%);border-top:1px solid rgba(220,237,250,.09);border-bottom:1px solid rgba(220,237,250,.11)}
+.library-section:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 42% 16% at 100% 3%,rgba(114,147,200,.13),transparent),radial-gradient(ellipse 28% 22% at 0% 100%,rgba(129,81,155,.10),transparent)}
+.library-section>.container{position:relative}
+.library-header{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(210px,.6fr);gap:48px;align-items:end;margin-bottom:clamp(34px,5vw,64px)}
+.library-header h2{margin:18px 0 20px!important;max-width:15ch}
+.library-header h2 em{color:var(--seafoam)}
+.library-header p{max-width:730px;margin:0}
+.library-header-right{display:flex;flex-direction:column;align-items:flex-end;gap:22px;padding-bottom:6px}
+.library-vertical-kanji{font-size:1.35rem;letter-spacing:.28em!important;color:var(--copper);writing-mode:vertical-rl;min-height:80px}
+.library-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(16px,2vw,24px);align-items:stretch}
+.library-card{position:relative;display:flex;flex-direction:column;min-height:100%;border:1px solid rgba(208,228,244,.14);border-radius:18px;overflow:hidden;background:linear-gradient(165deg,#1a2a3f,#142234);transition:transform .3s var(--curve),border-color .25s ease,box-shadow .3s ease}
+.library-card:focus-within,.library-card:hover{border-color:rgba(147,240,222,.52);transform:translateY(-4px);box-shadow:0 24px 45px rgba(0,0,0,.27)}
+.library-card-cover{display:grid;place-items:center;position:relative;min-height:295px;overflow:hidden;background:radial-gradient(ellipse at 50% 50%,rgba(169,171,227,.17),transparent 74%),#142034;padding:28px 19px 21px}
+.library-card-cover a{display:grid;place-items:center;width:100%;min-height:250px;border-radius:4px}
+.library-card-cover img{width:auto;height:245px;max-width:100%;object-fit:contain;border-radius:2px;box-shadow:10px 15px 26px rgba(0,0,0,.34);transition:transform .42s var(--curve),box-shadow .42s ease}
+.library-card:hover img{transform:translateY(-6px) rotate(-1deg) scale(1.035);box-shadow:13px 25px 36px rgba(0,0,0,.32)}
+.library-number{position:absolute;left:14px;top:13px;color:#e8eef7;background:rgba(6,15,26,.62);border:1px solid rgba(220,241,255,.14);border-radius:99px;padding:4px 11px;font-size:.76rem;z-index:1}
+.library-number span{color:#b9cbd9}
+.library-card-info{padding:21px 18px 24px;display:flex;flex:1;flex-direction:column;gap:10px}
+.library-type{color:var(--seafoam);font-size:.76rem;letter-spacing:.08em!important;text-transform:uppercase}
+.library-card h3{font-size:1.12rem!important;line-height:1.35!important;margin:0;color:#f7f7f7}
+.library-card-info p{font-size:.92rem!important;line-height:1.55!important;margin:0 0 12px;color:#cbd9e4!important}
+.library-amazon-link{margin-top:auto;color:#b4f9e7;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;border-top:1px solid rgba(215,234,251,.18);padding-top:13px;text-decoration:none}
+.library-amazon-link:hover{text-decoration:underline}
+.anthology-card{background:linear-gradient(158deg,#22334a,#172437)}
+.anthology-card .library-type{color:var(--copper)}
+.library-outro{display:flex;justify-content:space-between;align-items:center;gap:32px;border-top:1px solid rgba(223,237,252,.17);padding-top:32px;margin-top:48px}
+.library-outro p{max-width:540px;margin:0;font-size:1rem}
+.library-bottom-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+/* Books and catalogue pages */
+.amazon-store-banner{padding:32px 36px;margin-top:0;margin-bottom:50px;display:flex;justify-content:space-between;align-items:center;gap:36px;border-radius:20px;background:linear-gradient(120deg,#1c3241,#1a2540);border:1px solid rgba(147,240,222,.26)}
+.amazon-store-banner h2{font-size:clamp(1.65rem,2.5vw,2.6rem)!important;margin:8px 0}
+.amazon-store-banner p{font-size:.96rem!important;line-height:1.65;color:#d6e3eb;margin:0;max-width:700px}
+.amazon-store-banner .btn{flex-shrink:0}
+.book-buy-link{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(147,240,222,.38);border-radius:99px;color:#101a28!important;background:var(--seafoam);padding:10px 13px;min-height:48px;text-decoration:none}
+.book-buy-link:hover{background:#c0f8ef}
+.catalog-footer{gap:10px!important;display:flex;flex-wrap:wrap;align-items:center}.catalog-footer a{min-height:44px;display:inline-flex;align-items:center}
+.catalog-visual a{display:block;outline-offset:4px}.catalog-visual a img{transition:transform .3s var(--curve)}
+.catalog-card:hover .catalog-visual a img{transform:translateY(-5px)}
+.bookshop-hub{background:radial-gradient(ellipse at 90% 20%,rgba(159,168,255,.14),transparent 55%),#101d2d}
+.bookshop-hub-inner{display:grid;grid-template-columns:1fr auto;gap:50px;align-items:center}
+.bookshop-hub h2{margin:12px 0 18px}.bookshop-hub p{max-width:600px;margin:0}
+.bookshop-hub-actions{display:flex;flex-direction:column;gap:12px;min-width:290px}
+.bookshop-hub-actions .btn{justify-content:space-between}
+/* Accessible detail and controls */
+.reading-card h3{font-size:clamp(1.16rem,1.8vw,1.5rem)!important;line-height:1.5!important}
+.demo-interaction label{font-size:.98rem!important}
+.demo-interaction select{min-height:50px;padding:12px 15px;font-size:1rem}
+.demo-point-buttons button,.demo-undo-buttons button,.filter,.mp-flow-tabs button,.mp-flow-node,.mp-app-nav button,.mp-league-filter button,.mp-app-nav a{
+ min-height:44px;font-family:var(--font-body);font-size:.9rem!important;line-height:1.45!important
+}
+.mp-flow-node{min-height:118px}
+.mp-flow-field>span,.mp-flow-canvas-label,.mp-flow-hint{font-size:.78rem!important}
+.mp-step-index,.mp-flow-node small,.mp-app-logo small,.mp-app-sidefoot small,.mp-flow-id{font-size:.76rem!important}
+.mp-flow-detail h3{font-size:2rem!important}
+.mp-decision-grid p{font-size:.97rem!important}
+.mp-sticky{font-size:.89rem!important;line-height:1.65!important}
+.mp-artifact-caption p{font-size:.92rem!important}
+.mp-app-nav button{font-size:.94rem!important}
+.method h3,.process-step h3{font-size:1.3rem!important}
+.method p,.process-step p{font-size:.99rem!important}
+/* Footer horizontal rhythm */
+.footer-top{gap:clamp(30px,4vw,60px)!important}.footer-top h4{font-size:.97rem!important}
+.footer a{font-size:.92rem!important;line-height:1.55!important;min-height:38px;display:flex;align-items:center}
+.footer-bottom,.footer-blurb{font-size:.9rem!important;color:#c3d2de!important}
+/* equal rhythm, consistent borders, and no over-animated imagery */
+.approach-grid,.process-steps,.word-panels,.mp-decision-grid,.about-interests{gap:clamp(16px,2vw,24px)!important}
+.approach-card,.process-step,.method,.word-panel,.interest-card,.reading-card,.mp-decision-grid article{border-radius:18px!important}
+.reveal{transition:opacity .65s var(--curve),transform .65s var(--curve)}
+/* At widths where nav/hero need space, keep both readable instead of squeezing. */
+@media(max-width:1270px){
+ .nav-links a{padding:12px 13px!important;font-size:.88rem!important}
+ .header-inner{gap:13px}
+ .social-mini{display:none}
+ .library-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:1040px){
+ .library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .hero-copy{padding-left:var(--gutter)}
+ .hero h1{font-size:clamp(3.25rem,6.4vw,5.2rem)!important}
+ .signature-grid{grid-template-columns:145px 1fr;gap:30px}
+ .signature-kanji{display:none}
+ .signature-portrait,.signature-portrait img{width:138px;height:138px}
+}
+@media(max-width:800px){
+ html{scroll-padding-top:86px}
+ .site-header{height:74px!important}
+ .header-inner{width:calc(100% - 36px)}
+ .nav-links{top:71px;left:0;right:0;gap:4px!important;padding:12px!important}
+ .nav-links a{display:flex;justify-content:flex-start;padding:14px 17px!important;min-height:50px}
+ .menu-toggle{display:flex!important;align-items:center;justify-content:center;min-width:48px;min-height:48px;font-size:1.4rem}
+ .hero-shell{grid-template-columns:1fr;min-height:unset}.hero-copy{padding:74px var(--gutter) 55px}
+ .hero-visual{min-height:350px}.hero h1{font-size:clamp(3.1rem,11vw,5.4rem)!important}
+ .section-pad{padding-block:clamp(72px,9vw,94px)!important}
+ .library-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .library-header{grid-template-columns:1fr;gap:24px}
+ .library-header-right{flex-direction:row;align-items:center;justify-content:space-between}
+ .library-vertical-kanji{writing-mode:horizontal-tb;min-height:0}
+ .library-outro{flex-direction:column;align-items:flex-start}
+ .library-bottom-actions{justify-content:flex-start}
+ .amazon-store-banner{flex-direction:column;align-items:flex-start;padding:28px}
+ .bookshop-hub-inner{grid-template-columns:1fr}.bookshop-hub-actions{min-width:0;align-items:stretch}
+ .signature-grid{grid-template-columns:120px minmax(0,1fr)}
+ .signature-portrait,.signature-portrait img{width:112px;height:112px}
+}
+@media(max-width:640px){
+ .library-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ .library-card-cover{min-height:240px;padding:27px 12px 12px}
+ .library-card-cover a{min-height:204px}
+ .library-card-cover img{height:210px}
+ .library-card-info{padding:16px 13px 19px;gap:8px}
+ .library-card h3{font-size:1.04rem!important}
+ .library-card-info p{font-size:.87rem!important}
+ .library-amazon-link{font-size:.87rem!important}
+ .library-number{font-size:.7rem!important;padding:3px 8px;top:10px;left:10px}
+ .library-header-right .btn{width:auto}
+ .signature-grid{grid-template-columns:1fr}.signature-copy h2{font-size:2rem!important}
+ .brand-text small{font-size:.65rem!important}
+ .hero h1{font-size:clamp(3rem,11.6vw,4.6rem)!important}
+ .hero-intro{font-size:1rem!important}
+ .hero-socials a strong{display:inline}
+ .footer-pre h2{font-size:clamp(2.05rem,8vw,3.1rem)!important}
+ .books-page-hero h1,.studio-page-hero h1,.product-hero h1,.mp-page-hero h1{font-size:clamp(2.65rem,10vw,4.4rem)!important}
+ .feature-extract{padding-left:14px}
+ .btn{width:auto}
+}
+@media(max-width:370px){.library-grid{grid-template-columns:1fr}.library-card-cover img{height:255px}.library-card-cover a{min-height:255px}}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}
+ .reveal{opacity:1!important;transform:none!important}
+ .hero-image{animation:none!important;transform:none!important}
+ .library-card:hover,.library-card:hover img{transform:none!important}
+}
+@media(prefers-contrast:more){
+ :root{--bone-soft:#fff;--dim:#ecf7ff;--muted:#e0eef8}
+ .library-card,.catalog-card,.reading-card{border-color:#bbcbd9!important}
+ .btn-outline,.btn-white-outline{border-color:#eaf7ff!important}
+}
+/* Secondary navigation and scholarly references retain generous keyboard/touch areas. */
+.japan-sources a{display:inline-flex;align-items:center;min-height:44px;padding:8px 10px;margin:4px 10px 4px 0;border-radius:8px;border:1px solid rgba(194,222,239,.20);font-size:.9rem;color:#dcecf7}
+.japan-sources a:hover{border-color:var(--seafoam);color:#fff}
+.breadcrumbs a{display:inline-flex;align-items:center;min-height:44px;padding:8px 4px;font-size:.88rem;color:#d9e8ef}
+.catalog-visual a{width:min(100%,270px);min-width:min(200px,70%);min-height:300px;display:grid;place-items:center}
+.footer a{min-height:44px}
+
+
+/* v6 header cleanup */
+.brand-text small{font-size:.72rem!important;letter-spacing:.18em!important}
+.social-mini-link{padding:0!important;width:42px;min-width:42px!important;justify-content:center!important}.social-mini-link b{display:none!important}.social-mini-link svg{width:18px;height:18px}
+.seal{display:none!important}
+.hero-image{background-position:62% center!important}
+
+/* V7: published cover and considered editorial typography */
+.ux-book-cover-image{display:block;width:min(100%,340px);height:auto;aspect-ratio:5/8;object-fit:contain;box-shadow:0 28px 70px rgba(0,0,0,.34),0 3px 13px rgba(0,0,0,.18);border-radius:3px;transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .55s}
+.book-feature-art,.product-backdrop{display:flex;justify-content:center;align-items:center;flex-direction:column;gap:1.25rem}
+.book-feature-art .cover-sun,.book-feature-art .cover-line{pointer-events:none}
+.ux-book-cover-image:hover{transform:translateY(-6px) rotate(-.5deg);box-shadow:0 34px 80px rgba(0,0,0,.42)}
+.signature-copy p+p{margin-top:1rem}
+@media(max-width:650px){.ux-book-cover-image{width:min(70vw,300px)}}
+@media(prefers-reduced-motion:reduce){.ux-book-cover-image,.ux-book-cover-image:hover{transition:none;transform:none}}
