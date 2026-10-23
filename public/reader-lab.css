@@ -1,0 +1,36 @@
+/* Curated, zero-dependency reading room. Progressive enhancement; no content hidden if JS is off. */
+.reader-lab{background:#132320;color:#f1eee4;position:relative;overflow:hidden}
+.reader-lab:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 80% 5%,rgba(160,184,157,.11),transparent 51%),linear-gradient(135deg,transparent 70%,rgba(220,192,137,.045))}
+.reader-lab__inner{position:relative;display:grid;grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);gap:clamp(2rem,6vw,6.5rem);align-items:center}
+.reader-lab__eyebrow{color:#d7be8e!important;letter-spacing:.2em}
+.reader-lab h2{color:#f1eee4;font-size:clamp(3rem,5vw,5.9rem);line-height:1.08;letter-spacing:-.058em;margin:.9rem 0 1.4rem}
+.reader-lab h2 em{color:#d4bea0;font-family:Georgia,serif;font-weight:400}
+.reader-lab__intro>p:not(.reader-lab__prompt):not(.reader-lab__quiet){max-width:34rem;color:#b8c6c1;font-size:1.03rem;line-height:1.85}
+.reader-lab__prompt{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:#b9c6c0;margin:2.5rem 0 .7rem;font-weight:700}
+.reader-lab__choices{display:grid;gap:.55rem}
+.reader-choice{appearance:none;width:100%;border:1px solid rgba(215,229,211,.19);background:rgba(250,250,240,.035);border-radius:3px;padding:1.05rem 1.1rem;display:flex;gap:1rem;align-items:center;text-align:left;color:#eee9dd;font:600 .92rem/1.4 inherit;cursor:pointer;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.reader-choice span:first-child{color:#d1b789;font:600 .65rem/1.5 'Inter',sans-serif;letter-spacing:.12em}
+.reader-choice span:last-child{margin-left:auto;font-size:1.1rem;color:#d4bea0}
+.reader-choice:hover{background:rgba(255,255,255,.09);transform:translateX(3px)}
+.reader-choice.is-selected{background:#e4dcc8;color:#172821;border-color:#e4dcc8}
+.reader-choice.is-selected span:first-child,.reader-choice.is-selected span:last-child{color:#567265}
+.reader-choice:focus-visible{outline:3px solid #e9c58b;outline-offset:3px}
+.reader-lab__quiet{font-size:.78rem;color:#a5b6ae;margin-top:1.15rem;line-height:1.6}
+.reader-lab__result{min-width:0;background:#e7e9df;border:1px solid rgba(255,255,255,.11);box-shadow:0 27px 65px rgba(0,0,0,.22);color:#20302c}
+.reader-lab__art{height:clamp(260px,33vw,415px);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 50%,#dbe2d8,#a5b6ab)}
+.reader-lab__halo{position:absolute;width:70%;aspect-ratio:1;border:1px solid rgba(255,255,255,.45);border-radius:50%;box-shadow:0 0 0 45px rgba(255,255,255,.06),0 0 0 92px rgba(255,255,255,.045)}
+.reader-lab__art img{width:auto;height:83%;max-width:77%;object-fit:contain;position:relative;filter:drop-shadow(12px 22px 18px rgba(12,30,20,.27));transition:opacity .18s ease,transform .35s ease}
+.reader-lab__art img.is-changing{opacity:.4;transform:translateY(7px)}
+.reader-lab__details{padding:clamp(1.5rem,3vw,2.4rem)}
+.reader-lab__kicker{color:#5e7469;font-size:.66rem;letter-spacing:.18em;font-weight:700}
+.reader-lab__details h3{font-size:clamp(1.6rem,2.4vw,2.35rem);font-weight:650;line-height:1.2;letter-spacing:-.045em;margin:.8rem 0}
+.reader-lab__details p{font-size:.94rem;line-height:1.75;color:#4f6059;max-width:40rem;min-height:5.2em}
+.reader-lab__actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.7rem}
+.reader-lab__actions a{min-height:44px;padding:.82rem 1rem;display:inline-flex;justify-content:space-between;align-items:center;gap:1.2rem;font-size:.81rem;font-weight:700;text-decoration:none;transition:transform .2s ease,background .2s ease;border:1px solid #254137}
+.reader-lab__actions a:hover{transform:translateY(-2px)}
+.reader-lab__primary{background:#254137;color:#f4f0e6}
+.reader-lab__secondary{color:#254137;background:transparent}
+.reader-lab__actions a:focus-visible{outline:3px solid #9b642c;outline-offset:3px}
+@media(max-width:900px){.reader-lab__inner{grid-template-columns:1fr;gap:2rem}.reader-lab__art{height:330px}.reader-lab__details p{min-height:0}}
+@media(max-width:520px){.reader-lab__art{height:265px}.reader-lab__actions{flex-direction:column}.reader-lab__actions a{justify-content:space-between}.reader-lab h2{font-size:clamp(2.7rem,13vw,3.5rem)}}
+@media(prefers-reduced-motion:reduce){.reader-choice,.reader-lab__art img,.reader-lab__actions a{transition:none!important}.reader-choice:hover,.reader-lab__actions a:hover{transform:none}}
