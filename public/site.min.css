@@ -56,3 +56,8 @@
 .catalogue-grid .catalog-card-body .catalog-footer a:not(.book-buy-link){background:transparent;color:#e3f1ed}
 .catalogue-grid .catalog-card-body .catalog-footer a:hover{background:#e5f5eb;color:#102d2a!important;border-color:#e5f5eb!important}
 @media(max-width:420px){.catalogue-section .filter-controls .filter{padding:11px 16px!important}.catalogue-grid .catalog-card-body .catalog-footer a{width:100%;justify-content:center}}
+
+/* Homepage MatchPoint action layout, consistent with the global button system. */
+.match-home-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:24px}
+.match-home-actions .btn{max-width:100%;white-space:normal}
+@media(max-width:520px){.match-home-actions{align-items:stretch;flex-direction:column}.match-home-actions .btn{width:100%;justify-content:center}}
