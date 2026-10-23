@@ -3,11 +3,13 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Validate site structure and internal links
-        run: python3 scripts/check_site.py
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Validate static pages and assets
+        run: |
+          python3 scripts/check_site.py
+          python3 scripts/check_seo.py

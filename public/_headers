@@ -7,5 +7,14 @@
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
+/*.css
+  Cache-Control: public, max-age=3600
+
+/*.js
+  Cache-Control: public, max-age=3600
+
 /assets/*
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
   Cache-Control: public, max-age=3600
