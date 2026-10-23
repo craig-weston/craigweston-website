@@ -40,3 +40,19 @@
 .catalogue-section> .container img[src*="japan-anthology"]{height:auto!important;max-width:100%;object-fit:contain!important}
 @media(max-width:1050px){.catalogue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalogue-grid .catalog-visual{height:350px}.catalogue-grid .catalog-visual img{max-height:275px!important}}
 @media(max-width:640px){.catalogue-grid{grid-template-columns:minmax(0,1fr);gap:24px}.catalogue-grid .catalog-visual{height:320px;padding:40px 20px 20px}.catalogue-grid .catalog-visual img{max-height:260px!important}.catalogue-grid .catalog-card-body{padding:22px 21px 23px}.catalogue-grid .catalog-card-body h3{font-size:1.48rem}.library-card-cover img{max-height:215px!important}}
+
+
+/* UI polish: consistent button padding and comfortable clickable areas. */
+.btn{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;gap:12px!important;padding:13px clamp(21px,2.5vw,30px)!important;min-height:50px!important;line-height:1.35!important;white-space:normal;text-align:center;vertical-align:middle}
+.btn .arrow{flex-shrink:0}
+.btn:focus-visible,.filter:focus-visible,.catalogue-section .catalog-footer a:focus-visible{outline:3px solid #86e8d2;outline-offset:3px}
+@media(max-width:480px){.btn{max-width:100%;padding:13px 20px!important;font-size:.875rem!important}}
+/* Japan book cards: make actions look intentional, not clipped text links. */
+.catalogue-section .filter-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.catalogue-section .filter-controls .filter{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;min-height:44px!important;padding:11px 20px!important;border-radius:999px;line-height:1.3!important;white-space:normal;text-align:center}
+.catalogue-grid .catalog-card-body .catalog-footer{gap:10px 12px;align-items:stretch}
+.catalogue-grid .catalog-card-body .catalog-footer a{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:44px!important;padding:10px 17px!important;border:1px solid rgba(175,221,216,.35)!important;border-radius:999px;line-height:1.35!important;text-decoration:none!important;white-space:normal;overflow-wrap:normal;font-size:.82rem!important}
+.catalogue-grid .catalog-card-body .catalog-footer .book-buy-link{background:#aaf0d4;color:#0a2927!important;border-color:#aaf0d4!important}
+.catalogue-grid .catalog-card-body .catalog-footer a:not(.book-buy-link){background:transparent;color:#e3f1ed}
+.catalogue-grid .catalog-card-body .catalog-footer a:hover{background:#e5f5eb;color:#102d2a!important;border-color:#e5f5eb!important}
+@media(max-width:420px){.catalogue-section .filter-controls .filter{padding:11px 16px!important}.catalogue-grid .catalog-card-body .catalog-footer a{width:100%;justify-content:center}}
