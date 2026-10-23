@@ -256,3 +256,31 @@ main:focus{outline:none}
 .signature-copy p+p{margin-top:1rem}
 @media(max-width:650px){.ux-book-cover-image{width:min(70vw,300px)}}
 @media(prefers-reduced-motion:reduce){.ux-book-cover-image,.ux-book-cover-image:hover{transition:none;transform:none}}
+
+
+/* 2026-10-23 · Book catalogue spacing and intrinsic-image ratio repairs.
+   Keep after the legacy cascade layers; bundled output and refinement.css
+   intentionally contain the same overrides. */
+.catalogue-grid{align-items:stretch;gap:clamp(24px,3.25vw,46px)}
+.catalogue-grid>.catalog-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border-radius:19px}
+.catalogue-grid .catalog-visual{height:390px;min-height:0;padding:38px 24px 25px;flex:0 0 auto;display:grid;place-items:center}
+.catalogue-grid .catalog-visual>a{width:100%;height:100%;min-height:0;min-width:0;display:grid;place-items:center}
+.catalogue-grid .catalog-visual img{display:block;width:auto!important;height:auto!important;max-height:310px!important;max-width:100%!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center;border-radius:3px}
+.catalogue-grid .catalog-label{top:16px;left:20px}
+.catalogue-grid .catalog-card-body{padding:23px clamp(20px,2.4vw,28px) 26px;flex:1;min-width:0;display:flex;flex-direction:column;gap:9px}
+.catalogue-grid .catalog-card-body h3{margin:0!important;font-size:clamp(1.45rem,2.2vw,1.7rem);line-height:1.25}
+.catalogue-grid .catalog-card-body>p{margin:0!important;min-height:0!important;line-height:1.6!important}
+.catalogue-grid .catalog-card-body .catalog-footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;margin-top:auto;padding-top:19px;border-top:1px solid rgba(211,230,238,.16)}
+.catalogue-grid .catalog-card-body .catalog-footer a{display:inline-flex;align-items:center;min-height:40px;padding:6px 0!important;line-height:1.35!important;border:0!important;text-decoration:underline;text-underline-offset:5px;overflow-wrap:anywhere}
+.catalogue-grid .catalog-card-body .catalog-footer a:focus-visible{outline:3px solid #8be9d5;outline-offset:3px}
+/* Book jackets retain each source image's intrinsic aspect ratio rather than
+   being forced into the proportions of another volume. */
+.library-card-cover img,.japan-stack img,.books-hero-art img,.books-bento-card img,.ux-book-cover-image,.catalogue-section img[src$=".webp"]{aspect-ratio:auto!important;object-fit:contain!important}
+.library-card-cover img{width:auto!important;height:auto!important;max-width:100%!important;max-height:255px!important}
+.japan-stack img{height:auto!important}
+.books-hero-art img{height:auto!important}
+.books-bento-card img{height:auto!important}
+.ux-book-cover-image{height:auto!important}
+.catalogue-section> .container img[src*="japan-anthology"]{height:auto!important;max-width:100%;object-fit:contain!important}
+@media(max-width:1050px){.catalogue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalogue-grid .catalog-visual{height:350px}.catalogue-grid .catalog-visual img{max-height:275px!important}}
+@media(max-width:640px){.catalogue-grid{grid-template-columns:minmax(0,1fr);gap:24px}.catalogue-grid .catalog-visual{height:320px;padding:40px 20px 20px}.catalogue-grid .catalog-visual img{max-height:260px!important}.catalogue-grid .catalog-card-body{padding:22px 21px 23px}.catalogue-grid .catalog-card-body h3{font-size:1.48rem}.library-card-cover img{max-height:215px!important}}
