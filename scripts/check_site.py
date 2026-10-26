@@ -6,7 +6,7 @@ from urllib.parse import urlsplit, unquote
 import re, sys
 
 ROOT=Path(__file__).resolve().parents[1]/'public'
-PAGES=['index.html','design.html','matchpoint.html','books.html','ux-book.html','japan-books.html','about.html']
+PAGES=['index.html','design.html','matchpoint.html','books.html','ux-book.html','japan-books.html' ,'about.html','ux-audits.html']
 errors=[]
 
 class Links(HTMLParser):

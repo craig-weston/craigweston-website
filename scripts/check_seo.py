@@ -5,7 +5,7 @@ from pathlib import Path
 import json,re,sys,xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]/'public'
-PAGES=['index.html','design.html','matchpoint.html','books.html','ux-book.html','japan-books.html','about.html']
+PAGES=['index.html','design.html','matchpoint.html','books.html','ux-book.html','japan-books.html' ,'about.html','ux-audits.html']
 BASE='https://craigweston.co.uk/'
 errors=[];titles=set();descs=set()
 class Tags(HTMLParser):
