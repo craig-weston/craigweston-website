@@ -25,3 +25,6 @@
  .site-header .menu-toggle{display:flex!important;align-items:center;justify-content:center;width:48px;height:48px;color:#f0f7f6}
  .site-header .social-mini{display:none}
 }
+
+/* Ensure the two-part designer/author identity stays tidy below the site name. */
+.brand-text small{font-size:.625rem!important;letter-spacing:.1em!important;white-space:nowrap}
